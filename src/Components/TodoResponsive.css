@@ -1,0 +1,135 @@
+@media (max-width:1440px){
+    .content_container .heading{
+        font-size:36px;
+    }
+    .content_container .list_add_box input{
+        width: 400px;
+    }
+    .list_container .wrapper .each_list{
+        width: 400px;
+        font-size: 22px;
+    }
+    .content_container button{
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width:1040px){
+    .content_container{
+        width: 625px;
+    }
+    .list_container{
+        width: 625px;
+    }
+}
+
+@media (max-width:650px){
+    .content_container{
+        width: 95%;
+        height: 37.5%;
+    }
+    .list_container{
+        width: 95%;
+        height: 57%;
+    }
+    .content_container .heading{
+        font-size:30px;
+    }
+    .content_container .list_add_box{
+        width: 70%;
+    }
+    .content_container .list_add_box input{
+        width: 100%;
+    }
+    .list_container .wrapper{
+        width: 75%;
+    }
+    .list_container .wrapper .each_list{
+        width: 100%;
+    }
+    .content_container button{
+        font-weight: 600;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width:556px){
+    .content_container .keepnotes_img{
+        width: 70px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    .content_container .heading{
+        font-size:18px;
+        font-weight: 600;
+        margin: 10px 0px;
+    }
+    .content_container .list_add_box{
+        margin: 20px 0px;
+    }
+    .content_container .list_add_box input{
+        font-size: 18px;
+    }
+    .content_container .list_add_box .list_icon{
+        font-size: 27px;
+    }
+    .content_container button{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .list_container .wrapper{
+        width: 85%;
+    }
+    .list_container .wrapper .each_list{
+        font-size: 20px;
+        padding-left: 15px;
+    }
+    .list_container .wrapper .each_list .delete_icon{
+        font-size: 28px;
+    }
+}
+@media (max-width:352px){
+    .content_container .keepnotes_img{
+        width: 50px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .content_container .heading{
+        font-size:13px;
+        font-weight: 400;
+        margin: 10px 20px;
+    }
+    .content_container .list_add_box{
+        width: 75%;
+    }
+    .content_container .list_add_box input{
+        font-size: 15px;
+    }
+    .content_container button{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .list_container{
+        top: 360px;
+        height: 55%;
+    }
+    .list_container .wrapper{
+        height: 320px;
+    }
+    .list_container .wrapper .each_list{
+        font-size: 15px;
+        margin: 3px;
+        padding: 2px 6px 2px 15px;
+    }
+    .list_container .wrapper .each_list .delete_icon{
+        font-size: 22px
+    }
+}
+
+@media (max-width:280px){
+    .list_container{
+        top: 270px;
+    }
+}
