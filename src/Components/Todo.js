@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Todo.css'
 import keepnotes from '../Images/keepnotes.png'
 import { MdNoteAdd, MdDeleteForever } from 'react-icons/md'
-
+ 
 const Todo = () => {
     const [data, setdata] = useState("");
     const [item, setitem] = useState([]);
