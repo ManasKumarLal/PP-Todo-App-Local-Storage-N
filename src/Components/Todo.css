@@ -78,7 +78,7 @@
 /* Lists container */
 .list_container{
     /* background-color: lightcoral; */
-    background: url(https://cdn.neowin.com/news/images/uploaded/2018/09/1537418720_keep_notes.jpg);
+    background: url(../Images/keepnotesbg.jpg);
     box-shadow: 5px 5px 5px black;
     background-size: cover;
     background-position-x: left;
