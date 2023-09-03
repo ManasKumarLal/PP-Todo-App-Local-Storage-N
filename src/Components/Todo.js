@@ -1,12 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Todo.css'
 import './TodoResponsive.css'
 import keepnotes from '../Images/keepnotes.png'
 import { MdNoteAdd, MdDeleteForever } from 'react-icons/md'
- 
+
 const Todo = () => {
-    const [data, setdata] = useState(""); 
-    const [item, setitem] = useState([]);
+    const getlocalitems = () => {
+        let itemlist = localStorage.getItem('Lists');
+        if(itemlist){
+            return JSON.parse(itemlist);
+        }
+        else{
+            return []; //not necessary
+        }
+    }
+    const [data, setdata] = useState("");
+    const [item, setitem] = useState(getlocalitems());
+
+    //add item to local storage
+    useEffect(() => {
+        localStorage.setItem('Lists',JSON.stringify(item))
+    }, [item])
 
     const additem = () => {
         if (!data) {
@@ -14,7 +28,6 @@ const Todo = () => {
         } else {
             setitem([data, ...item]);
             setdata("");
-            console.log(item.length)
         }
     }
     const deleteitem = (index) => {
@@ -24,7 +37,7 @@ const Todo = () => {
         setitem(updatedItems);
     }
     const handleKeyDown = (event) => {
-        if(event.key === "Enter"){
+        if (event.key === "Enter") {
             additem();
         }
     }
@@ -38,7 +51,7 @@ const Todo = () => {
                         <input type="text" value={data} onChange={(event) => { setdata(event.target.value) }} onKeyDown={handleKeyDown} placeholder='✍✍List items...' />
                         <MdNoteAdd className='list_icon' onClick={() => additem()} />
                     </div>
-                    <button className={`${item.length<2 ? "hide" : ""}`} onClick={()=>{setitem([])}}>Remove All</button>
+                    <button className={`${item.length < 2 ? "hide" : ""}`} onClick={() => { setitem([]) }}>Remove All</button>
                 </div>
                 <div className="list_container">
                     <div className='wrapper'>
